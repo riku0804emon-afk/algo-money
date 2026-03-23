@@ -48,7 +48,7 @@ AFFILIATE_LINKS = {
         "category": "スクール"
     },
     "マクロミル": {
-        "url": os.environ.get("AFF_MACROMILL", "https://monitor.macromill.com/?ref=alogo"),
+        "url": os.environ.get("AFF_MACROMILL", "https://px.a8.net/svt/ejp?a8mat=4AZMKL+DJ0LMA+2WL0+BZ8OX"),
         "description": "国内最大級のアンケートモニター",
         "category": "アンケート"
     },
