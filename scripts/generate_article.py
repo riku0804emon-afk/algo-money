@@ -14,7 +14,7 @@ import urllib.error
 
 # ========== 設定 ==========
 OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")
-MODEL = os.environ.get("MODEL", "anthropic/claude-sonnet-4-20250514")
+MODEL = os.environ.get("MODEL", "anthropic/claude-sonnet-4")
 SITE_NAME = "alogo-money.dev"
 SITE_URL = "https://algo-money.dev"
 AUTHOR = "alogo-money編集部"

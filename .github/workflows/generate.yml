@@ -41,7 +41,7 @@ jobs:
       - name: 📝 記事を生成
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          MODEL: ${{ vars.MODEL || 'anthropic/claude-sonnet-4-20250514' }}
+          MODEL: ${{ vars.MODEL || 'anthropic/claude-sonnet-4' }}
           # アフィリエイトリンク（Secretsに設定）
           AFF_CROWDWORKS: ${{ secrets.AFF_CROWDWORKS }}
           AFF_LANCERS: ${{ secrets.AFF_LANCERS }}
