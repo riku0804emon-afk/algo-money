@@ -436,6 +436,9 @@ def save_article(article: dict) -> str:
 {structured_data}
 </script>
 <link rel="stylesheet" href="../static/article.css">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SW26WJRWP6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-SW26WJRWP6');</script>
 </head>
 <body>
 
