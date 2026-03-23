@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="副業・在宅ワークの始め方を徹底比較。初心者でも安心のランキング＆完全ガイド。クラウドソーシング、フリーランス、スキル販売など最新情報をお届け。">
+<meta name="keywords" content="副業, 在宅ワーク, クラウドソーシング, フリーランス, 副業おすすめ, 副業ランキング">
+<title>alogo-money.dev | 副業・在宅ワーク完全ガイド 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --brand: #2563EB;
+  --brand-light: #DBEAFE;
+  --brand-dark: #1E40AF;
+  --accent: #F59E0B;
+  --accent-light: #FEF3C7;
+  --success: #10B981;
+  --success-light: #D1FAE5;
+  --bg: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+  --border: #E2E8F0;
+  --border-light: #F1F5F9;
+  --shadow-sm: 0 1px 2px rgba(15,23,42,0.04);
+  --shadow-md: 0 4px 16px rgba(15,23,42,0.06);
+  --shadow-lg: 0 12px 40px rgba(15,23,42,0.08);
+  --shadow-xl: 0 20px 60px rgba(15,23,42,0.1);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Noto Sans JP', sans-serif;
+}
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+
+/* === UTILITY === */
+.container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+/* === REVEAL ANIMATIONS === */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal-left.visible { opacity: 1; transform: translateX(0); }
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+/* stagger children */
+.stagger > *:nth-child(1) { transition-delay: 0ms; }
+.stagger > *:nth-child(2) { transition-delay: 80ms; }
+.stagger > *:nth-child(3) { transition-delay: 160ms; }
+.stagger > *:nth-child(4) { transition-delay: 240ms; }
+.stagger > *:nth-child(5) { transition-delay: 320ms; }
+.stagger > *:nth-child(6) { transition-delay: 400ms; }
+
+/* === NAVBAR === */
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(248,250,252,0.85);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow 0.3s, background 0.3s;
+}
+.navbar.scrolled {
+  background: rgba(255,255,255,0.95);
+  box-shadow: var(--shadow-md);
+}
+.nav-inner {
+  max-width: 1120px; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+.nav-logo {
+  font-family: var(--font-display);
+  font-weight: 800; font-size: 20px;
+  color: var(--brand);
+  letter-spacing: -0.02em;
+}
+.nav-logo span { color: var(--text-primary); }
+.nav-links { display: flex; gap: 32px; align-items: center; }
+.nav-links a {
+  font-size: 14px; font-weight: 500; color: var(--text-secondary);
+  transition: color 0.2s;
+  position: relative;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -4px; left: 0;
+  width: 0; height: 2px; background: var(--brand);
+  transition: width 0.3s cubic-bezier(0.16,1,0.3,1);
+}
+.nav-links a:hover { color: var(--brand); }
+.nav-links a:hover::after { width: 100%; }
+.nav-cta {
+  background: var(--brand); color: #fff !important;
+  padding: 8px 20px; border-radius: 100px;
+  font-size: 13px; font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+.nav-cta::after { display: none !important; }
+.nav-cta:hover { background: var(--brand-dark); transform: translateY(-1px); }
+
+/* mobile hamburger */
+.nav-hamburger {
+  display: none; background: none; border: none; cursor: pointer;
+  width: 32px; height: 32px; position: relative;
+}
+.nav-hamburger span {
+  display: block; width: 20px; height: 2px; background: var(--text-primary);
+  position: absolute; left: 6px; transition: all 0.3s;
+}
+.nav-hamburger span:nth-child(1) { top: 10px; }
+.nav-hamburger span:nth-child(2) { top: 16px; }
+.nav-hamburger span:nth-child(3) { top: 22px; }
+.nav-hamburger.active span:nth-child(1) { top: 16px; transform: rotate(45deg); }
+.nav-hamburger.active span:nth-child(2) { opacity: 0; }
+.nav-hamburger.active span:nth-child(3) { top: 16px; transform: rotate(-45deg); }
+
+.mobile-menu {
+  display: none;
+  position: fixed; top: 64px; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.98);
+  backdrop-filter: blur(20px);
+  z-index: 99;
+  flex-direction: column; align-items: center; justify-content: center; gap: 32px;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-size: 18px; font-weight: 600; color: var(--text-primary);
+}
+
+/* === HERO === */
+.hero {
+  padding: 140px 0 100px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #F0F7FF 0%, #F8FAFC 40%, #FFFBEB 100%);
+}
+.hero::before {
+  content: '';
+  position: absolute; top: -200px; right: -200px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite;
+}
+.hero::after {
+  content: '';
+  position: absolute; bottom: -100px; left: -100px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(245,158,11,0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 10s ease-in-out infinite reverse;
+}
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(20px, -30px); }
+}
+
+/* grid dots pattern */
+.hero-pattern {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background-image: radial-gradient(rgba(37,99,235,0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative; z-index: 2;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+  align-items: center;
+}
+.hero-content { max-width: 540px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 6px 14px 6px 8px;
+  border-radius: 100px;
+  font-size: 13px; font-weight: 500; color: var(--text-secondary);
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+}
+.hero-badge-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--success);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+.hero h1 {
+  font-family: var(--font-body);
+  font-size: clamp(32px, 4.5vw, 48px);
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+.hero h1 em {
+  font-style: normal;
+  background: linear-gradient(135deg, var(--brand) 0%, #7C3AED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-desc {
+  font-size: 16px; line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--brand); color: #fff;
+  padding: 14px 28px; border-radius: 100px;
+  font-size: 15px; font-weight: 600;
+  border: none; cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
+  box-shadow: 0 4px 16px rgba(37,99,235,0.3);
+}
+.btn-primary:hover {
+  background: var(--brand-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37,99,235,0.35);
+}
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--bg-card); color: var(--text-primary);
+  padding: 14px 28px; border-radius: 100px;
+  font-size: 15px; font-weight: 600;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-secondary:hover {
+  border-color: var(--brand); color: var(--brand);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* hero visual */
+.hero-visual {
+  position: relative;
+  display: flex; justify-content: center; align-items: center;
+}
+.hero-card-stack { position: relative; width: 100%; max-width: 420px; }
+.hero-float-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  box-shadow: var(--shadow-lg);
+  position: absolute;
+  animation: cardFloat 6s ease-in-out infinite;
+}
+.hero-float-card:nth-child(1) {
+  top: 0; left: 0; right: 20px;
+  z-index: 3;
+}
+.hero-float-card:nth-child(2) {
+  top: 90px; left: 30px; right: 0;
+  z-index: 2;
+  animation-delay: -2s;
+}
+.hero-float-card:nth-child(3) {
+  top: 180px; left: 10px; right: 10px;
+  z-index: 1;
+  animation-delay: -4s;
+}
+@keyframes cardFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.hfc-header { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.hfc-icon {
+  width: 40px; height: 40px; border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+}
+.hfc-icon.blue { background: var(--brand-light); }
+.hfc-icon.amber { background: var(--accent-light); }
+.hfc-icon.green { background: var(--success-light); }
+.hfc-name { font-weight: 600; font-size: 15px; }
+.hfc-tag {
+  font-size: 11px; font-weight: 600; padding: 2px 8px;
+  border-radius: 100px; margin-left: auto;
+}
+.hfc-tag.hot { background: #FEE2E2; color: #DC2626; }
+.hfc-tag.new { background: var(--brand-light); color: var(--brand); }
+.hfc-tag.safe { background: var(--success-light); color: #059669; }
+.hfc-stats { display: flex; gap: 20px; }
+.hfc-stat-label { font-size: 11px; color: var(--text-muted); }
+.hfc-stat-val { font-size: 16px; font-weight: 700; color: var(--text-primary); }
+
+/* trust bar */
+.trust-bar {
+  padding: 24px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-card);
+}
+.trust-inner {
+  display: flex; align-items: center; justify-content: center;
+  gap: 48px; flex-wrap: wrap;
+}
+.trust-item {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 14px; color: var(--text-secondary); font-weight: 500;
+}
+.trust-icon { font-size: 20px; }
+.trust-num { font-weight: 700; color: var(--text-primary); font-family: var(--font-display); }
+
+/* === SECTION COMMON === */
+.section {
+  padding: 100px 0;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.section-label {
+  display: inline-block;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand);
+  background: var(--brand-light);
+  padding: 4px 14px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+.section-title {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+.section-desc {
+  font-size: 16px; color: var(--text-secondary);
+  max-width: 600px; margin: 0 auto;
+}
+
+/* === RANKING === */
+.ranking-filters {
+  display: flex; gap: 8px; justify-content: center; margin-bottom: 40px; flex-wrap: wrap;
+}
+.filter-pill {
+  padding: 8px 20px; border-radius: 100px;
+  font-size: 14px; font-weight: 500;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.filter-pill:hover { border-color: var(--brand); color: var(--brand); }
+.filter-pill.active {
+  background: var(--brand); color: #fff; border-color: var(--brand);
+}
+
+/* ranking cards */
+.ranking-list { display: flex; flex-direction: column; gap: 20px; }
+.rank-card {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  align-items: center;
+  gap: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  transition: all 0.35s cubic-bezier(0.16,1,0.3,1);
+  position: relative;
+  overflow: hidden;
+}
+.rank-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; bottom: 0;
+  width: 4px; background: var(--brand);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.rank-card:hover {
+  border-color: var(--brand);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+.rank-card:hover::before { opacity: 1; }
+
+.rank-number {
+  font-family: var(--font-display);
+  font-size: 32px; font-weight: 800;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1;
+}
+.rank-card:nth-child(1) .rank-number { color: #F59E0B; }
+.rank-card:nth-child(2) .rank-number { color: #94A3B8; }
+.rank-card:nth-child(3) .rank-number { color: #D97706; }
+
+.rank-body { min-width: 0; }
+.rank-top { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; flex-wrap: wrap; }
+.rank-name { font-size: 18px; font-weight: 700; }
+.rank-badges { display: flex; gap: 6px; flex-wrap: wrap; }
+.rank-badge {
+  font-size: 11px; font-weight: 600;
+  padding: 2px 10px; border-radius: 100px;
+}
+.rank-badge.recommend { background: #DBEAFE; color: #2563EB; }
+.rank-badge.beginner { background: #D1FAE5; color: #059669; }
+.rank-badge.high-pay { background: #FEF3C7; color: #D97706; }
+.rank-desc {
+  font-size: 14px; color: var(--text-secondary);
+  margin-bottom: 12px;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.rank-meta { display: flex; gap: 24px; flex-wrap: wrap; }
+.rank-meta-item {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 13px; color: var(--text-secondary);
+}
+.rank-meta-label { font-weight: 400; }
+.rank-meta-val { font-weight: 700; color: var(--text-primary); }
+
+.rank-action { flex-shrink: 0; }
+.rank-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 12px 24px; border-radius: 100px;
+  font-size: 14px; font-weight: 600;
+  background: var(--brand); color: #fff;
+  border: none; cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+.rank-btn:hover {
+  background: var(--brand-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(37,99,235,0.3);
+}
+.rank-btn svg { width: 16px; height: 16px; }
+
+/* === HOW IT WORKS === */
+.steps-section { background: var(--bg-card); }
+.steps-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
+  position: relative;
+}
+.steps-grid::before {
+  content: '';
+  position: absolute; top: 48px; left: 12.5%; right: 12.5%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  z-index: 0;
+}
+.step-card {
+  text-align: center;
+  position: relative; z-index: 1;
+}
+.step-num {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand), #7C3AED);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 4px 16px rgba(37,99,235,0.25);
+}
+.step-icon { font-size: 32px; margin-bottom: 12px; }
+.step-title { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+.step-text { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+
+/* === COMPARISON TABLE === */
+.compare-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+}
+.compare-table {
+  width: 100%; min-width: 700px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.compare-table thead th {
+  background: var(--brand);
+  color: #fff;
+  padding: 16px 20px;
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+}
+.compare-table thead th:first-child { border-radius: var(--radius-lg) 0 0 0; }
+.compare-table thead th:last-child { border-radius: 0 var(--radius-lg) 0 0; }
+.compare-table tbody td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: middle;
+}
+.compare-table tbody tr:last-child td { border-bottom: none; }
+.compare-table tbody tr:hover { background: #F8FAFC; }
+.compare-table .svc-name { font-weight: 700; }
+.compare-stars { color: var(--accent); letter-spacing: 2px; }
+
+/* === ARTICLES === */
+.articles-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+}
+.article-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16,1,0.3,1);
+}
+.article-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+  border-color: transparent;
+}
+.article-thumb {
+  height: 180px;
+  background: linear-gradient(135deg, var(--brand-light) 0%, #EDE9FE 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 48px;
+  position: relative;
+  overflow: hidden;
+}
+.article-thumb::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(0deg, rgba(255,255,255,0.3) 0%, transparent 50%);
+}
+.article-body { padding: 24px; }
+.article-cat {
+  font-size: 11px; font-weight: 700; color: var(--brand);
+  text-transform: uppercase; letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+.article-title {
+  font-size: 17px; font-weight: 700;
+  margin-bottom: 10px; line-height: 1.5;
+}
+.article-excerpt {
+  font-size: 14px; color: var(--text-secondary);
+  line-height: 1.7;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+  margin-bottom: 16px;
+}
+.article-footer {
+  display: flex; align-items: center; justify-content: space-between;
+}
+.article-date { font-size: 12px; color: var(--text-muted); }
+.article-read {
+  font-size: 13px; font-weight: 600; color: var(--brand);
+  display: flex; align-items: center; gap: 4px;
+  transition: gap 0.3s;
+}
+.article-card:hover .article-read { gap: 8px; }
+
+/* === FAQ === */
+.faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+.faq-item.open { border-color: var(--brand); }
+.faq-q {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 24px;
+  font-weight: 600; font-size: 15px;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s;
+}
+.faq-q:hover { color: var(--brand); }
+.faq-q-icon {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--border-light);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; color: var(--text-muted);
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+.faq-item.open .faq-q-icon { background: var(--brand); color: #fff; transform: rotate(45deg); }
+.faq-a {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16,1,0.3,1), padding 0.3s;
+}
+.faq-a-inner {
+  padding: 0 24px 20px;
+  font-size: 14px; line-height: 1.8; color: var(--text-secondary);
+}
+
+/* === CTA === */
+.cta-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, var(--brand) 0%, #7C3AED 100%);
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-section::before {
+  content: '';
+  position: absolute; top: -100px; right: -100px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.cta-title {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 800; margin-bottom: 16px;
+  position: relative;
+}
+.cta-desc {
+  font-size: 16px; opacity: 0.85; margin-bottom: 36px;
+  max-width: 480px; margin-left: auto; margin-right: auto;
+}
+.cta-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #fff; color: var(--brand);
+  padding: 16px 36px; border-radius: 100px;
+  font-size: 16px; font-weight: 700;
+  border: none; cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+}
+
+/* === FOOTER === */
+.footer {
+  background: var(--text-primary);
+  color: #CBD5E1;
+  padding: 64px 0 32px;
+}
+.footer-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;
+  margin-bottom: 48px;
+}
+.footer-brand {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 800; color: #fff;
+  margin-bottom: 12px;
+}
+.footer-brand span { color: var(--accent); }
+.footer-tagline { font-size: 14px; line-height: 1.7; }
+.footer-col-title {
+  font-size: 13px; font-weight: 700; color: #fff;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a {
+  font-size: 14px; color: #94A3B8;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: #fff; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 24px;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 12px;
+}
+.footer-copy { font-size: 13px; color: #64748B; }
+.footer-legal { font-size: 12px; color: #64748B; max-width: 600px; line-height: 1.6; }
+
+/* === SCROLL TO TOP === */
+.scroll-top {
+  position: fixed; bottom: 24px; right: 24px;
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--brand); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  border: none; cursor: pointer;
+  opacity: 0; pointer-events: none;
+  transition: all 0.3s;
+  box-shadow: var(--shadow-lg);
+  z-index: 50;
+}
+.scroll-top.show { opacity: 1; pointer-events: auto; }
+.scroll-top:hover { transform: translateY(-3px); background: var(--brand-dark); }
+
+/* === PROGRESS BAR === */
+.progress-bar {
+  position: fixed; top: 64px; left: 0; right: 0;
+  height: 3px; background: var(--border-light);
+  z-index: 99;
+}
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--brand), #7C3AED);
+  width: 0%;
+  transition: width 0.1s;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+  .hero-visual { order: -1; }
+  .hero-card-stack { max-width: 360px; margin: 0 auto; }
+  .hero-content { text-align: center; margin: 0 auto; }
+  .hero-actions { justify-content: center; }
+  .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .steps-grid::before { display: none; }
+  .articles-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-hamburger { display: block; }
+  .hero { padding: 120px 0 72px; }
+  .section { padding: 72px 0; }
+  .rank-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 24px;
+  }
+  .rank-number {
+    position: absolute; top: 24px; right: 24px;
+    font-size: 24px;
+  }
+  .rank-action { width: 100%; }
+  .rank-btn { width: 100%; justify-content: center; }
+  .articles-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .trust-inner { gap: 24px; }
+  .cta-section { padding: 72px 0; }
+}
+@media (max-width: 480px) {
+  .hero h1 { font-size: 28px; }
+  .hero-card-stack { max-width: 300px; }
+  .hero-float-card { padding: 16px; }
+  .hfc-stats { gap: 12px; }
+  .steps-grid { grid-template-columns: 1fr; }
+  .ranking-filters { gap: 6px; }
+  .filter-pill { padding: 6px 14px; font-size: 13px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">alogo<span>-money</span>.dev</a>
+    <div class="nav-links">
+      <a href="#ranking">ランキング</a>
+      <a href="#howto">始め方</a>
+      <a href="#compare">比較表</a>
+      <a href="#articles">コラム</a>
+      <a href="#faq">FAQ</a>
+      <a href="#ranking" class="nav-cta">無料で始める →</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#ranking" onclick="closeMobile()">ランキング</a>
+  <a href="#howto" onclick="closeMobile()">始め方</a>
+  <a href="#compare" onclick="closeMobile()">比較表</a>
+  <a href="#articles" onclick="closeMobile()">コラム</a>
+  <a href="#faq" onclick="closeMobile()">FAQ</a>
+  <a href="#ranking" class="btn-primary" onclick="closeMobile()">無料で始める</a>
+</div>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar"><div class="progress-bar-fill" id="progressFill"></div></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-pattern"></div>
+  <div class="container hero-inner">
+    <div class="hero-content reveal">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        2026年3月 最新版
+      </div>
+      <h1>副業で<em>月5万円</em>を<br>確実に稼ぐ方法</h1>
+      <p class="hero-desc">初心者でも安心。厳選された副業サービスを徹底比較し、あなたに最適な在宅ワークが見つかる完全ガイドです。</p>
+      <div class="hero-actions">
+        <a href="#ranking" class="btn-primary">ランキングを見る <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#howto" class="btn-secondary">始め方を学ぶ</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal-right">
+      <div class="hero-card-stack" style="height:280px;">
+        <div class="hero-float-card">
+          <div class="hfc-header">
+            <div class="hfc-icon blue">💼</div>
+            <div class="hfc-name">クラウドワークス</div>
+            <span class="hfc-tag hot">人気</span>
+          </div>
+          <div class="hfc-stats">
+            <div><div class="hfc-stat-label">平均月収</div><div class="hfc-stat-val">¥52,000</div></div>
+            <div><div class="hfc-stat-label">案件数</div><div class="hfc-stat-val">10万件+</div></div>
+          </div>
+        </div>
+        <div class="hero-float-card">
+          <div class="hfc-header">
+            <div class="hfc-icon amber">🎨</div>
+            <div class="hfc-name">ココナラ</div>
+            <span class="hfc-tag new">注目</span>
+          </div>
+          <div class="hfc-stats">
+            <div><div class="hfc-stat-label">平均月収</div><div class="hfc-stat-val">¥38,000</div></div>
+            <div><div class="hfc-stat-label">出品者数</div><div class="hfc-stat-val">80万人</div></div>
+          </div>
+        </div>
+        <div class="hero-float-card">
+          <div class="hfc-header">
+            <div class="hfc-icon green">🚀</div>
+            <div class="hfc-name">ランサーズ</div>
+            <span class="hfc-tag safe">安心</span>
+          </div>
+          <div class="hfc-stats">
+            <div><div class="hfc-stat-label">平均月収</div><div class="hfc-stat-val">¥48,000</div></div>
+            <div><div class="hfc-stat-label">登録者数</div><div class="hfc-stat-val">120万人</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="trust-icon">📊</span><span class="trust-num">50+</span> サービスを調査</div>
+    <div class="trust-item"><span class="trust-icon">👥</span><span class="trust-num">1,200+</span> 人のレビューを分析</div>
+    <div class="trust-item"><span class="trust-icon">📅</span>毎月更新</div>
+    <div class="trust-item"><span class="trust-icon">🔒</span>完全無料・登録不要</div>
+  </div>
+</div>
+
+<!-- RANKING -->
+<section class="section" id="ranking">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Ranking</span>
+      <h2 class="section-title">副業サービスおすすめランキング</h2>
+      <p class="section-desc">編集部が実際に利用して厳選した、初心者にも安心のサービスTOP5</p>
+    </div>
+
+    <div class="ranking-filters reveal" id="filters">
+      <button class="filter-pill active" onclick="filterRank('all', this)">すべて</button>
+      <button class="filter-pill" onclick="filterRank('crowd', this)">クラウドソーシング</button>
+      <button class="filter-pill" onclick="filterRank('skill', this)">スキル販売</button>
+      <button class="filter-pill" onclick="filterRank('freelance', this)">フリーランス</button>
+      <button class="filter-pill" onclick="filterRank('survey', this)">アンケート</button>
+    </div>
+
+    <div class="ranking-list stagger" id="rankingList">
+      <div class="rank-card reveal" data-cat="crowd">
+        <div class="rank-number">1</div>
+        <div class="rank-body">
+          <div class="rank-top">
+            <span class="rank-name">クラウドワークス</span>
+            <div class="rank-badges">
+              <span class="rank-badge recommend">編集部イチ推し</span>
+              <span class="rank-badge beginner">初心者◎</span>
+            </div>
+          </div>
+          <p class="rank-desc">日本最大級のクラウドソーシング。ライティング・データ入力・デザインなど幅広い案件が揃い、初心者でも始めやすい仕組みが充実。仮払い制度で報酬トラブルも安心。</p>
+          <div class="rank-meta">
+            <div class="rank-meta-item"><span class="rank-meta-label">報酬目安</span><span class="rank-meta-val">月3〜10万円</span></div>
+            <div class="rank-meta-item"><span class="rank-meta-label">難易度</span><span class="rank-meta-val">★☆☆</span></div>
+            <div class="rank-meta-item"><span class="rank-meta-label">手数料</span><span class="rank-meta-val">5〜20%</span></div>
+          </div>
+        </div>
+        <div class="rank-action">
+          <button class="rank-btn" onclick="window.open('#','_blank')">詳細を見る <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
+
+      <div class="rank-card reveal" data-cat="skill">
+        <div class="rank-number">2</div>
+        <div class="rank-body">
+          <div class="rank-top">
+            <span class="rank-name">ココナラ</span>
+            <div class="rank-badges">
+              <span class="rank-badge high-pay">高単価</span>
+              <span class="rank-badge beginner">初心者◎</span>
+            </div>
+          </div>
+          <p class="rank-desc">自分のスキルを商品として出品できるマーケット。イラスト・占い・プログラミング・翻訳など、得意なことを活かして稼げる。価格を自分で設定できるのが強み。</p>
+          <div class="rank-meta">
+            <div class="rank-meta-item"><span class="rank-meta-label">報酬目安</span><span class="rank-meta-val">月2〜15万円</span></div>
+            <div class="rank-meta-item"><span class="rank-meta-label">難易度</span><span class="rank-meta-val">★★☆</span></div>
+            <div class="rank-meta-item"><span class="rank-meta-label">手数料</span><span class="rank-meta-val">22%</span></div>
+          </div>
+        </div>
+        <div class="rank-action">
+          <button class="rank-btn" onclick="window.open('#','_blank')">詳細を見る <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
+
+      <div class="rank-card reveal" data-cat="crowd">
+        <div class="rank-number">3</div>
+        <div class="rank-body">
+          <div class="rank-top">
+            <span class="rank-name">ランサーズ</span>
+            <div class="rank-badges">
+              <span class="rank-badge recommend">定番</span>
+            </div>
+          </div>
+          <p class="rank-desc">クラウドワークスと並ぶ大手クラウドソーシング。「認定ランサー」制度で実力がつくと高単価案件にアクセスしやすくなる。エージェント機能で案件紹介も。</p>
+          <div class="rank-meta">
+            <div class="rank-meta-item"><span class="rank-meta-label">報酬目安</span><span class="rank-meta-val">月3〜12万円</span></div>
+            <div class="rank-meta-item"><span class="rank-meta-label">難易度</span><span class="rank-meta-val">★☆☆</span></div>
+            <div class="rank-meta-item"><span class="rank-meta-label">手数料</span><span class="rank-meta-val">16.5%</span></div>
+          </div>
+        </div>
+        <div class="rank-action">
+          <button class="rank-btn" onclick="window.open('#','_blank')">詳細を見る <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
+
+      <div class="rank-card reveal" data-cat="freelance">
+        <div class="rank-number">4</div>
+        <div class="rank-body">
+          <div class="rank-top">
+            <span class="rank-name">レバテックフリーランス</span>
+            <div class="rank-badges">
+              <span class="rank-badge high-pay">高単価</span>
+            </div>
+          </div>
+          <p class="rank-desc">IT・Web系フリーランス向けエージェント。エンジニア・デザイナー案件に特化し、業界最大級の案件数を保有。専任カウンセラーが案件マッチングをサポート。</p>
+          <div class="rank-meta">
+            <div class="rank-meta-item"><span class="rank-meta-label">報酬目安</span><span class="rank-meta-val">月20〜80万円</span></div>
+            <div class="rank-meta-item"><span class="rank-meta-label">難易度</span><span class="rank-meta-val">★★★</span></div>
+            <div class="rank-meta-item"><span class="rank-meta-label">手数料</span><span class="rank-meta-val">非公開（マージン制）</span></div>
+          </div>
+        </div>
+        <div class="rank-action">
+          <button class="rank-btn" onclick="window.open('#','_blank')">詳細を見る <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
+
+      <div class="rank-card reveal" data-cat="survey">
+        <div class="rank-number">5</div>
+        <div class="rank-body">
+          <div class="rank-top">
+            <span class="rank-name">マクロミル</span>
+            <div class="rank-badges">
+              <span class="rank-badge beginner">超初心者向け</span>
+            </div>
+          </div>
+          <p class="rank-desc">アンケートに回答するだけでポイントが貯まる最大手リサーチ会社。スキマ時間にスマホでサクッと回答でき、貯まったポイントは現金・Amazonギフト券等に交換可能。</p>
+          <div class="rank-meta">
+            <div class="rank-meta-item"><span class="rank-meta-label">報酬目安</span><span class="rank-meta-val">月500〜5,000円</span></div>
+            <div class="rank-meta-item"><span class="rank-meta-label">難易度</span><span class="rank-meta-val">★☆☆</span></div>
+            <div class="rank-meta-item"><span class="rank-meta-label">手数料</span><span class="rank-meta-val">なし</span></div>
+          </div>
+        </div>
+        <div class="rank-action">
+          <button class="rank-btn" onclick="window.open('#','_blank')">詳細を見る <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO START -->
+<section class="section steps-section" id="howto">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">How to Start</span>
+      <h2 class="section-title">副業の始め方 4ステップ</h2>
+      <p class="section-desc">最短5分で登録完了。迷わず始められるシンプルな流れ</p>
+    </div>
+    <div class="steps-grid stagger">
+      <div class="step-card reveal">
+        <div class="step-num">1</div>
+        <div class="step-icon">🎯</div>
+        <div class="step-title">目標を決める</div>
+        <div class="step-text">月いくら稼ぎたいかを明確にしましょう。目標額でおすすめサービスが変わります。</div>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">2</div>
+        <div class="step-icon">📝</div>
+        <div class="step-title">無料登録する</div>
+        <div class="step-text">上のランキングから気になるサービスに無料登録。まずは2〜3個に登録するのがコツ。</div>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">3</div>
+        <div class="step-icon">💪</div>
+        <div class="step-title">最初の1件を取る</div>
+        <div class="step-text">最初は単価より実績を優先。低単価でも1件こなせば受注率がグッと上がります。</div>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">4</div>
+        <div class="step-icon">📈</div>
+        <div class="step-title">単価を上げていく</div>
+        <div class="step-text">実績が貯まったら徐々に単価アップ。プロフィール充実と提案文の改善が鍵。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="section" id="compare">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Comparison</span>
+      <h2 class="section-title">サービス徹底比較表</h2>
+      <p class="section-desc">気になるポイントを一覧でチェック</p>
+    </div>
+    <div class="compare-wrap reveal">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>サービス名</th>
+            <th>タイプ</th>
+            <th>報酬目安/月</th>
+            <th>手数料</th>
+            <th>初心者おすすめ度</th>
+            <th>即日開始</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="svc-name">クラウドワークス</td>
+            <td>クラウドソーシング</td>
+            <td>3〜10万円</td>
+            <td>5〜20%</td>
+            <td class="compare-stars">★★★★★</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td class="svc-name">ココナラ</td>
+            <td>スキル販売</td>
+            <td>2〜15万円</td>
+            <td>22%</td>
+            <td class="compare-stars">★★★★☆</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td class="svc-name">ランサーズ</td>
+            <td>クラウドソーシング</td>
+            <td>3〜12万円</td>
+            <td>16.5%</td>
+            <td class="compare-stars">★★★★☆</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td class="svc-name">レバテック</td>
+            <td>フリーランス</td>
+            <td>20〜80万円</td>
+            <td>マージン制</td>
+            <td class="compare-stars">★★☆☆☆</td>
+            <td>❌</td>
+          </tr>
+          <tr>
+            <td class="svc-name">マクロミル</td>
+            <td>アンケート</td>
+            <td>500〜5,000円</td>
+            <td>なし</td>
+            <td class="compare-stars">★★★★★</td>
+            <td>✅</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLES -->
+<section class="section" id="articles" style="background:var(--bg-card);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Articles</span>
+      <h2 class="section-title">副業コラム・ノウハウ</h2>
+      <p class="section-desc">副業を始める前に読んでおきたい実践的な記事</p>
+    </div>
+    <div class="articles-grid stagger">
+      <article class="article-card reveal">
+        <div class="article-thumb" style="background:linear-gradient(135deg,#DBEAFE,#EDE9FE);">📊</div>
+        <div class="article-body">
+          <div class="article-cat">マネー</div>
+          <h3 class="article-title">副業の確定申告ガイド2026 — 20万円ルールの落とし穴</h3>
+          <p class="article-excerpt">副業所得が年間20万円を超えると確定申告が必要。しかし住民税の申告はそれ以下でも必要な場合が。知らないと損する最新のルールを解説。</p>
+          <div class="article-footer">
+            <span class="article-date">2026.03.15</span>
+            <span class="article-read">読む →</span>
+          </div>
+        </div>
+      </article>
+      <article class="article-card reveal">
+        <div class="article-thumb" style="background:linear-gradient(135deg,#D1FAE5,#DBEAFE);">💡</div>
+        <div class="article-body">
+          <div class="article-cat">キャリア</div>
+          <h3 class="article-title">本業にバレない副業の始め方 — 住民税と社会保険の対策</h3>
+          <p class="article-excerpt">会社にバレずに副業を続けるための実践テクニック。住民税の普通徴収切り替えから、SNS対策まで現役副業ワーカーが徹底解説。</p>
+          <div class="article-footer">
+            <span class="article-date">2026.03.08</span>
+            <span class="article-read">読む →</span>
+          </div>
+        </div>
+      </article>
+      <article class="article-card reveal">
+        <div class="article-thumb" style="background:linear-gradient(135deg,#FEF3C7,#FEE2E2);">🚀</div>
+        <div class="article-body">
+          <div class="article-cat">スキルアップ</div>
+          <h3 class="article-title">未経験から月5万円を達成した7人のリアルな体験談</h3>
+          <p class="article-excerpt">プログラミング未経験のOL、育休中のママ、定年退職後のシニアなど、バックグラウンドの異なる7人の成功ストーリーを紹介。</p>
+          <div class="article-footer">
+            <span class="article-date">2026.02.28</span>
+            <span class="article-read">読む →</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-title">よくある質問</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>副業は本当に未経験でも始められますか？</span>
+          <span class="faq-q-icon">+</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">はい、データ入力やアンケート回答など、特別なスキルがなくても始められる案件は多数あります。まずは簡単な案件から実績を作り、徐々にスキルアップしていくのが成功の王道パターンです。</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>会社に副業がバレることはありますか？</span>
+          <span class="faq-q-icon">+</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">住民税の納付方法を「普通徴収（自分で納付）」に切り替えれば、会社に通知が行くのを防げます。確定申告時に普通徴収を選択しましょう。ただし、SNSでの発信には注意が必要です。</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>確定申告は必要ですか？</span>
+          <span class="faq-q-icon">+</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">副業の所得（収入−経費）が年間20万円を超える場合、確定申告が必要です。20万円以下の場合も住民税の申告は必要となるケースがあるため、お住まいの自治体に確認しましょう。</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>1日何時間くらい必要ですか？</span>
+          <span class="faq-q-icon">+</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">月3〜5万円の目標であれば、1日1〜2時間程度が目安です。アンケート系なら通勤電車の中でもできますし、クラウドソーシングなら週末にまとめて作業する方法もあります。</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>このサイトのランキングはどのように決めていますか？</span>
+          <span class="faq-q-icon">+</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">編集部が実際にサービスを利用し、初心者の始めやすさ・報酬水準・サポート体制・ユーザーの口コミを総合的に評価しています。毎月情報を更新し、最新の状態を保っています。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container reveal">
+    <h2 class="cta-title">まずは無料登録から始めよう</h2>
+    <p class="cta-desc">登録は5分で完了。あなたの副業ライフがここから始まります。</p>
+    <a href="#ranking" class="cta-btn">おすすめランキングを見る →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">alogo<span>-money</span>.dev</div>
+        <p class="footer-tagline">副業・在宅ワークの始め方を徹底比較。初心者でも安心の完全ガイドサイト。</p>
+      </div>
+      <div>
+        <div class="footer-col-title">コンテンツ</div>
+        <ul class="footer-links">
+          <li><a href="#ranking">ランキング</a></li>
+          <li><a href="#howto">始め方</a></li>
+          <li><a href="#compare">比較表</a></li>
+          <li><a href="#articles">コラム</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">カテゴリ</div>
+        <ul class="footer-links">
+          <li><a href="#">クラウドソーシング</a></li>
+          <li><a href="#">スキル販売</a></li>
+          <li><a href="#">フリーランス</a></li>
+          <li><a href="#">アンケート</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">サイト情報</div>
+        <ul class="footer-links">
+          <li><a href="#">プライバシーポリシー</a></li>
+          <li><a href="#">免責事項</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+          <li><a href="#">運営者情報</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2026 alogo-money.dev All rights reserved.</span>
+      <span class="footer-legal">当サイトはアフィリエイトプログラムに参加しています。掲載情報は作成時点のものであり、最新情報は各サービスの公式サイトをご確認ください。</span>
+    </div>
+  </div>
+</footer>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop" aria-label="ページトップへ" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+// === SCROLL REVEAL ===
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
+
+// === NAVBAR SCROLL ===
+const navbar = document.getElementById('navbar');
+const scrollTop = document.getElementById('scrollTop');
+const progressFill = document.getElementById('progressFill');
+
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  navbar.classList.toggle('scrolled', y > 20);
+  scrollTop.classList.toggle('show', y > 400);
+
+  // progress bar
+  const docH = document.documentElement.scrollHeight - window.innerHeight;
+  progressFill.style.width = (y / docH * 100) + '%';
+});
+
+// === MOBILE MENU ===
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  mobileMenu.classList.toggle('open');
+  document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+});
+function closeMobile() {
+  hamburger.classList.remove('active');
+  mobileMenu.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// === FILTER ===
+function filterRank(cat, btn) {
+  document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.rank-card').forEach(card => {
+    if (cat === 'all' || card.dataset.cat === cat) {
+      card.style.display = 'grid';
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(16px)';
+      requestAnimationFrame(() => {
+        card.style.transition = 'opacity 0.4s, transform 0.4s';
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      });
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+// === FAQ ACCORDION ===
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const answer = item.querySelector('.faq-a');
+  const isOpen = item.classList.contains('open');
+
+  // close all
+  document.querySelectorAll('.faq-item').forEach(i => {
+    i.classList.remove('open');
+    i.querySelector('.faq-a').style.maxHeight = '0';
+  });
+
+  if (!isOpen) {
+    item.classList.add('open');
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+  }
+}
+
+// === SMOOTH ANCHOR ===
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
