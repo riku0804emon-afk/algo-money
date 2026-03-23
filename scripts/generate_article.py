@@ -33,7 +33,7 @@ AFFILIATE_LINKS = {
         "category": "クラウドソーシング"
     },
     "ココナラ": {
-        "url": os.environ.get("AFF_COCONALA", "https://coconala.com/?ref=alogo"),
+        "url": os.environ.get("AFF_COCONALA", "https://px.a8.net/svt/ejp?a8mat=4AZMKL+D1R12Q+2PEO+1HMAQQ"),
         "description": "スキルを出品できるマーケット",
         "category": "スキルマーケット"
     },
