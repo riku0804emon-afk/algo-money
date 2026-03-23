@@ -1,0 +1,95 @@
+name: 🚀 ブログ記事自動生成 & デプロイ
+
+on:
+  # 毎日朝9時(JST)に自動実行
+  schedule:
+    - cron: '0 0 * * *'  # UTC 0:00 = JST 9:00
+  
+  # 手動実行も可能
+  workflow_dispatch:
+    inputs:
+      num_articles:
+        description: '生成する記事数'
+        required: false
+        default: '1'
+        type: choice
+        options:
+          - '1'
+          - '2'
+          - '3'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 リポジトリをチェックアウト
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🐍 Python セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 📝 記事を生成
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          MODEL: ${{ vars.MODEL || 'anthropic/claude-sonnet-4-20250514' }}
+          # アフィリエイトリンク（Secretsに設定）
+          AFF_CROWDWORKS: ${{ secrets.AFF_CROWDWORKS }}
+          AFF_LANCERS: ${{ secrets.AFF_LANCERS }}
+          AFF_COCONALA: ${{ secrets.AFF_COCONALA }}
+          AFF_LEVTECH: ${{ secrets.AFF_LEVTECH }}
+          AFF_SHELIKES: ${{ secrets.AFF_SHELIKES }}
+          AFF_MACROMILL: ${{ secrets.AFF_MACROMILL }}
+          AFF_A8: ${{ secrets.AFF_A8 }}
+          AFF_MOSHIMO: ${{ secrets.AFF_MOSHIMO }}
+          AFF_SBIFX: ${{ secrets.AFF_SBIFX }}
+          AFF_COINCHECK: ${{ secrets.AFF_COINCHECK }}
+        run: |
+          NUM=${{ github.event.inputs.num_articles || '1' }}
+          for i in $(seq 1 $NUM); do
+            echo "=== 記事 $i / $NUM 生成中 ==="
+            python scripts/generate_article.py
+            sleep 5
+          done
+
+      - name: 🗂️ トップページ更新
+        run: python scripts/update_index.py
+
+      - name: 🗺️ サイトマップ生成
+        run: python scripts/generate_sitemap.py
+
+      - name: 📤 変更をコミット & プッシュ
+        run: |
+          git config user.name "alogo-money-bot"
+          git config user.email "bot@algo-money.dev"
+          git add -A
+          
+          # 変更がある場合のみコミット
+          if git diff --staged --quiet; then
+            echo "変更なし。スキップします。"
+          else
+            DATE=$(date +%Y-%m-%d)
+            git commit -m "📝 自動記事生成: $DATE"
+            git push
+          fi
+
+      - name: 📱 SNS自動投稿
+        if: success()
+        env:
+          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+          TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
+          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_SECRET: ${{ secrets.TWITTER_ACCESS_SECRET }}
+        run: |
+          if [ -f latest_sns.txt ]; then
+            python scripts/post_sns.py
+          fi
