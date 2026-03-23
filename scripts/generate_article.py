@@ -370,7 +370,7 @@ def generate_slug(title: str) -> str:
 
 def generate_structured_data(article: dict, slug: str) -> str:
     """JSON-LD 構造化データを生成"""
-    return json.dumps({
+    blog_posting = {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": article["title"],
@@ -391,7 +391,19 @@ def generate_structured_data(article: dict, slug: str) -> str:
             "@id": f"{SITE_URL}/articles/{slug}.html",
         },
         "keywords": ", ".join(article["tags"]),
-    }, ensure_ascii=False, indent=2)
+    }
+    breadcrumb = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "ホーム", "item": SITE_URL},
+            {"@type": "ListItem", "position": 2, "name": "記事一覧", "item": f"{SITE_URL}/#articles"},
+            {"@type": "ListItem", "position": 3, "name": article["title"]},
+        ]
+    }
+    return json.dumps(blog_posting, ensure_ascii=False, indent=2) + \
+        "\n</script>\n<script type=\"application/ld+json\">\n" + \
+        json.dumps(breadcrumb, ensure_ascii=False, indent=2)
 
 
 def save_article(article: dict) -> str:
@@ -439,6 +451,12 @@ def save_article(article: dict) -> str:
 </nav>
 
 <main class="article-main">
+  <nav class="breadcrumb" aria-label="パンくずリスト">
+    <a href="../index.html">ホーム</a> <span>›</span>
+    <a href="../index.html#articles">記事一覧</a> <span>›</span>
+    <span class="current">{article['title'][:30]}...</span>
+  </nav>
+
   <div class="article-header">
     <div class="article-meta-top">
       <span class="article-cat-badge">{article['category']}</span>
