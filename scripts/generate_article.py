@@ -42,9 +42,9 @@ AFFILIATE_LINKS = {
         "description": "エンジニア特化の高単価案件",
         "category": "フリーランス"
     },
-    "SHElikes": {
-        "url": os.environ.get("AFF_SHELIKES", "https://shelikes.jp/?ref=alogo"),
-        "description": "女性向けキャリアスクール",
+    "Skill Hacks": {
+        "url": os.environ.get("AFF_SKILLHACKS", "https://px.a8.net/svt/ejp?a8mat=4AZMKL+DVIPBM+4K3S+5YJRM"),
+        "description": "動画で学べる買い切り型オンラインスクール",
         "category": "スクール"
     },
     "マクロミル": {
@@ -79,7 +79,7 @@ ARTICLE_TOPICS = [
     {
         "title_template": "【{year}年最新】{service}の評判・口コミ｜実際に使ってわかったメリット・デメリット",
         "category": "レビュー",
-        "services": ["クラウドワークス", "ランサーズ", "ココナラ", "レバテックフリーランス", "SHElikes", "マクロミル"],
+        "services": ["クラウドワークス", "ランサーズ", "ココナラ", "レバテックフリーランス", "Skill Hacks", "マクロミル"],
         "tags": ["副業", "口コミ", "評判"]
     },
     {
@@ -317,7 +317,7 @@ def generate_slug(title: str) -> str:
         "ランサーズ": "lancers",
         "ココナラ": "coconala",
         "レバテック": "levtech",
-        "SHElikes": "shelikes",
+        "Skill Hacks": "skillhacks",
         "マクロミル": "macromill",
         "確定申告": "tax",
         "比較": "compare",
