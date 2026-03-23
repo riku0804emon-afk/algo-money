@@ -585,8 +585,25 @@ def main():
     print(f"   日時: {datetime.datetime.now()}")
     print()
 
-    # テーマ選定
-    topic = pick_topic()
+    # 既存記事タイトルを取得（重複回避）
+    articles_dir = os.path.join(os.path.dirname(__file__), "..", "articles")
+    index_path = os.path.join(articles_dir, "index.json")
+    existing_titles = set()
+    if os.path.exists(index_path):
+        with open(index_path, "r", encoding="utf-8") as f:
+            for a in json.load(f):
+                existing_titles.add(a.get("title", ""))
+
+    # テーマ選定（重複回避、最大20回試行）
+    topic = None
+    for _ in range(20):
+        candidate = pick_topic()
+        if candidate["title"] not in existing_titles:
+            topic = candidate
+            break
+    if topic is None:
+        topic = pick_topic()  # フォールバック
+
     print(f"📝 テーマ: {topic['title']}")
     print(f"   カテゴリ: {topic['category']}")
     print(f"   タグ: {', '.join(topic['tags'])}")
