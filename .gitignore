@@ -2,3 +2,9 @@ __pycache__/
 *.pyc
 .env
 latest_sns.txt
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
